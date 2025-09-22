@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Tahoma", sans-serif;
+            background: #f4f4f4;
+            color: #503535;
+            line-height: 1.6;
+            direction: rtl; /* عربي */
+        }
+
+        /* الهيدر العلوي */
+        header {
+        background: #18b8c1;
+        color: rgb(2, 0, 10);
+        text-align: center;
+        padding: 60px 20px 40px;
+        
+        }
+
+        header h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+        }
+
+        header h1 span {
+            color: #5e3b0d;
+        }
+
+        header p {
+            font-size: 22px;
+            opacity: 0.9;
+            text-transform: uppercase;
+        }
+
+        /* شريط التنقل NAV */
+        nav {
+            background: #75f4ff;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #0f0404;
+            font-weight: bold;
+            transition: color 0.3s;
+        
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #0b010b;
+            
+        }
+
+        /* الأقسام */
+        section {
+            padding: 80px 20px;
+            text-align: center;
+            min-height: 60vh;
+        }
+
+        section:nth-child(even) {
+            background: #ecf0f1;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 26px;
+            color: #2c3e50;
+        }
+
+        p {
+            max-width: 600px;
+            margin: auto;
+            text-transform: uppercase;
+        }
+        
+            
+    
+
+        /* صورة شخصية */
+        .about-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+            .about-content img {
+                width: 200px;
+                height: 200px;
+                border-radius: 100%;
+                border: 3px solid #09d4d7;
+                object-fit: cover;
+            }
+
+        /* المهارات */
+        .skills {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .skill {
+            background: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        /* المشاريع */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .project {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project:hover {
+        transform: scale(1.05);
+        }
+
+        .project img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px; 
+        }
+
+        /* التواصل */
+        .contact a {
+            display: inline-block;
+            margin: 10px;
+            background: #1b1d1c;
+            color: rgb(202, 234, 238);
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: background 0.3s;
+        }
+
+            .contact a:hover {
+            background: #16a085;
+        }
+
+    </style>
+</head>
+<body>
+
+        <!-- الهيدر -->
+        <header>
+            <h1>مرحباً، أنا <span>[يوسف قائد عبد صالح]</span></h1>
+            <p>مطور ويب / مصمم [واجهات ]</p>
+        </header>
+
+    <!-- شريط التنقل -->
+        <nav>
+            <ul>
+                <li><a href="#about" class="active">عني</a></li>
+                <li><a href="#skills">المهارات</a></li>
+                <li><a href="#projects">المشاريع</a></li>
+                <li><a href="#contact">التواصل</a></li>
+            </ul>
+        </nav>
+
+        <!-- عني -->
+        <section id="about">
+            <h2>عني</h2>
+            <div class="about-content">
+                <p>أنا <b>[يوسف قائد]</b>مطور ويب بخبرة [4] سنوات في بناء مواقع احترافية وتطبيقات ويب تفاعلية. أحب العمل على مشاريع جديدة ومبدع.</p>
+                <img src="myphoto.jpg" alt="صورة شخصية">
+            </div>
+        </section>
+
+        <!-- المهارات -->
+        <section id="skills">
+            <h2>المهارات</h2>
+            <div class="skills">
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JavaScript</div>
+    
+            </div>
+        </section>
+
+    <!-- المشاريع -->
+    <section id="projects">
+        <h2>المشاريع</h2>
+        <div class="projects">
+            <div class="project">
+                <img src="https://via.placeholder.com/400x200" alt="مشروع 1">
+                <h3>مشروع متجر إلكتروني</h3>
+            </div>
+            <div class="project">
+                <img src="https://via.placeholder.com/400x200" alt="مشروع 2">
+                <h3>لوحة تحكم</h3>
+            </div>
+            <div class="project">
+                <img src="https://via.placeholder.com/400x200" alt="مشروع 3">
+                <h3>موقع شخصي</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- التواصل -->
+    <section id="contact" class="contact">
+        <h2>تواصل معي</h2>
+        <a href="mailto:example@email.com">البريد الإلكتروني</a>
+        <a href="https://linkedin.com" target="_blank">WhatsApp</a>
+        <a href="https://github.com" target="_blank">facebook</a>
+    </section>
+
+</body>
+</html>
